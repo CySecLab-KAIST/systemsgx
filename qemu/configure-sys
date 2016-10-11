@@ -1,0 +1,15 @@
+#!/bin/bash
+
+export ARFLAGS="rv"
+
+./configure \
+  --prefix=/usr \
+  --sysconfdir=/etc \
+  --python=/usr/bin/python2 \
+  --libexecdir=/usr/lib/qemu \
+  --enable-linux-aio \
+  --localstatedir=/var \
+  --target-list=x86_64-softmmu \
+  --enable-debug \
+  --enable-debug-info \
+  #--disable-vnc \

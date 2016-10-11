@@ -1,0 +1,1 @@
+./qemu/x86_64-softmmu/qemu-system-x86_64 -hda ubuntuimage -m 4096 1>dbg_text.txt 2>err_text.txt -vga vmware 
