@@ -16,13 +16,11 @@ Environments & Prerequisites
 - Host OS: Ubuntu 14.04
 - Guest OS: Ubuntu 12.04 (will be tested with 14.04 later)
 - Requisite
-~~~~~~{.sh}
-Ubuntu
 $ apt-get build-dep qemu
 $ apt-get install libelf-dev
 
 - Building and Usage
-(Let's assume you installed systemsgx in your (TOP) directory)
+(Let's assume that you put systemsgx in your (TOP) directory)
   1. Run `configure-sys` and `make` in (TOP)/systemsgx/qemu/ directory for building.
       It will create qemu-system-x86\_64 binary in (TOP)/systemsgx/qemu/x86\_64-softmmu
 
