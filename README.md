@@ -21,18 +21,14 @@ Ubuntu
 $ apt-get build-dep qemu
 $ apt-get install libelf-dev
 
-- Compilation
-Let's assume you installed systemsgx in ~/ (e.g., /home/changho/systemsgx/)
-in ~/systemsgx/qemu/ please run 'configure-sys' and then 'make'
-It will create qemu-system-x86\_64 binary in ~/systemsgx/qemu/x86\_64-softmmu
+- Building and Usage
+(Let's assume you installed systemsgx in your (TOP) directory)
+  1. Run `configure-sys` and `make` in (TOP)/systemsgx/qemu/ directory for building.
+      It will create qemu-system-x86\_64 binary in (TOP)/systemsgx/qemu/x86\_64-softmmu
 
-- Guest Image Creation
-In ~/systemsgx/qemu/x86\_64-softmmu,
-Please create or put your QEMU ubuntuimage file (You need enough space to recomiple your linux kernel. My image size is 26GB for your reference.)
+  2. Please create your QEMU ubuntuimage file and put it in (TOP)/systemsgx/qemu/x86\_64-softmmu directory.
 
-- Run
-In ~/systemsgx/qemu/x86\_64-softmmu,
-Run ./qemu-system-x86\_64 -hda ubuntuimage -m 4096 1 > dbg-test.txt 2 > err-test.txt -vga vmware -net user,hostfwd=tcp::10022-:22 -net nic
+  3. Run `./qemu-system-x86\_64 -hda ubuntuimage -m 4096 1 > dbg-test.txt 2 > err-test.txt -vga vmware -net user,hostfwd=tcp::10022-:22 -net nic` in (TOP)/systemsgx/qemu/x86\_64-softmmu directory.
 (Please make sure that device.key file is in the ./conf directory of the current working directory where qemu-system-x86\_64 is executed)
 
 
